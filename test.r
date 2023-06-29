@@ -1,1 +1,1 @@
-print("R")
+print("S")
