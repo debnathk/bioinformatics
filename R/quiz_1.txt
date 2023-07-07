@@ -1,0 +1,210 @@
+Question 1:
+What does R stand for in R programming language?
+A) Regression
+B) Relational
+C) Recursive
+D) R is not an acronym
+
+Answer: D) R is not an acronym
+
+Question 2:
+Which of the following is not a valid data structure in R?
+A) Vector
+B) Matrix
+C) DataFrame
+D) Array
+
+Answer: D) Array
+
+Question 3:
+What is the function used to install packages in R?
+A) install()
+B) load()
+C) import()
+D) require()
+
+Answer: A) install()
+
+Question 4:
+Which operator is used for exact matching in R?
+A) ==
+B) =
+C) %
+D) %
+
+Answer: A) ==
+
+Question 5:
+How can you check the dimensions of a data frame in R?
+A) dim()
+B) size()
+C) shape()
+D) length()
+
+Answer: A) dim()
+
+Question 6:
+Which function is used to read data from a CSV file in R?
+A) read.csv()
+B) load.csv()
+C) import.csv()
+D) require.csv()
+
+Answer: A) read.csv()
+
+Question 7:
+What is the output of the following code?
+
+```R
+x <- c(1, 2, 3, 4, 5)
+y <- x * 2
+y
+```
+
+A) 2 4 6 8 10
+B) 1 2 3 4 5
+C) 1 4 9 16 25
+D) Error: unexpected '*' in "y <- x *"
+
+Answer: A) 2 4 6 8 10
+
+Question 8:
+Which function is used to generate a sequence of numbers in R?
+A) range()
+B) seq()
+C) linspace()
+D) generate()
+
+Answer: B) seq()
+
+Question 9:
+What is the purpose of the `summary()` function in R?
+A) It returns a summary of the statistical measures of a data frame.
+B) It provides a summary of the R session.
+C) It summarizes the code execution time.
+D) It generates a summary report of the R package.
+
+Answer: A) It returns a summary of the statistical measures of a data frame.
+
+Question 10:
+What does the function `mean()` calculate in R?
+A) Median
+B) Mode
+C) Mean
+D) Range
+
+Answer: C) Mean
+
+Question 11:
+Which of the following functions is used to create a scatter plot in R?
+A) plot()
+B) barplot()
+C) hist()
+D) boxplot()
+
+Answer: A) plot()
+
+Question 12:
+What is the output of the following code?
+
+```R
+x <- c(2, 4, 6, 8, 10)
+y <- sum(x)
+y
+```
+
+A) 2
+B) 30
+C) 10
+D) Error: unexpected '}' in "y <- sum(x)"
+
+Answer: B) 30
+
+Question 13:
+Which package in R is commonly used for data manipulation and analysis?
+A) ggplot2
+B) dplyr
+C) tidyr
+D) reshape2
+
+Answer: B) dplyr
+
+Question 14:
+What is the purpose of the `ifelse()` function in R?
+A) It checks if a condition is TRUE and executes the corresponding block of code.
+B) It calculates the mean of a vector.
+C) It generates random numbers from a specified distribution.
+D) It converts a character vector to a factor.
+
+Answer: A) It checks if a condition is TRUE and executes the corresponding block of code.
+
+Question 15:
+Which operator is used to subset data in R based on a specific condition?
+A) %
+B) &
+C) |
+D) $
+
+Answer: C) |
+
+Question 16:
+What is the output of the following code?
+
+```R
+x <- c(3, 2, 5, 1, 4)
+sort(x)
+```
+
+A) 1 2 3 4 5
+B) 5 4 3 2 1
+C) 3 2 5 1 4
+D) Error: unexpected '}' in "sort(x)"
+
+Answer: A) 1 2 3 4 5
+
+Question 17:
+Which function is used to calculate the standard deviation in R?
+A) mean()
+B) median()
+C) sd()
+D) var()
+
+Answer: C) sd()
+
+Question 18:
+What is the purpose of the `rep()` function in R?
+A) It creates a vector of repeated values.
+B) It calculates the correlation coefficient.
+C) It loads external datasets into R.
+D) It converts a matrix to a data frame.
+
+Answer: A) It creates a vector of repeated values.
+
+Question 19:
+Which function is used to generate a random sample in R?
+A) random()
+B) sample()
+C) rand()
+D) generate()
+
+Answer: B) sample()
+
+Question 20:
+What is the output of the following code?
+
+```R
+x <- 7
+if (x > 5) {
+  result <- "Large"
+} else {
+  result <- "Small"
+}
+result
+```
+
+A) Large
+B) Small
+C) 7
+D) Error: unexpected '}' in "result <- "Small""
+
+Answer: A) Large
