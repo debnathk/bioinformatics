@@ -1,0 +1,106 @@
+MCQ Questions - Theory:
+
+1. What is Biopython?
+   a) A programming language for bioinformatics
+   b) A popular bioinformatics library in Python
+   c) A database of biological sequences
+   d) A tool for protein structure prediction
+   Answer: b) A popular bioinformatics library in Python
+
+2. Which of the following is NOT a module in Biopython?
+   a) SeqIO
+   b) SeqUtils
+   c) Blast
+   d) Phylo
+   Answer: c) Blast
+
+3. How can you install Biopython?
+   a) Using pip install biopython
+   b) Downloading it from the Biopython website
+   c) Cloning the GitHub repository
+   d) Installing it via conda
+   Answer: a) Using pip install biopython
+
+4. What is a Seq object in Biopython?
+   a) A data structure that represents a biological sequence
+   b) A module for sequence alignment
+   c) A tool for phylogenetic analysis
+   d) A function for calculating molecular weight
+   Answer: a) A data structure that represents a biological sequence
+
+5. How can you read a sequence from a file using Biopython?
+   a) Using SeqIO.read()
+   b) Using SeqUtils.read()
+   c) Using Seq.read()
+   d) Using SeqIO.parse()
+   Answer: a) Using SeqIO.read()
+
+6. What is a Multiple Sequence Alignment (MSA)?
+   a) The alignment of multiple biological sequences
+   b) A method for predicting protein structures
+   c) A database for storing sequence data
+   d) A technique for gene expression analysis
+   Answer: a) The alignment of multiple biological sequences
+
+7. What is BLAST?
+   a) A module in Biopython for sequence alignment
+   b) A database for storing protein structures
+   c) A bioinformatics algorithm for sequence comparison
+   d) A Python library for phylogenetic analysis
+   Answer: c) A bioinformatics algorithm for sequence comparison
+
+8. How can you run a BLAST search programmatically using Biopython?
+   a) Using SeqUtils.blast()
+   b) Using Blast.run()
+   c) Using NCBIWWW.qblast()
+   d) Using Entrez.blast()
+   Answer: c) Using NCBIWWW.qblast()
+
+9. What is a phylogenetic tree?
+   a) A diagram showing the evolutionary relationships among species
+   b) A tool for predicting protein-protein interactions
+   c) A database for storing DNA sequences
+   d) A technique for gene expression analysis
+   Answer: a) A diagram showing the evolutionary relationships among species
+
+10. How can you calculate the molecular weight of a DNA sequence in Biopython?
+    a) Using SeqUtils.molecular_weight()
+    b) Using SeqIO.calculate_weight()
+    c) Using Seq.molecular_weight()
+    d) Using SeqUtils.calculate_weight()
+    Answer: a) Using SeqUtils.molecular_weight()
+
+11. What is a PDB file?
+    a) A file format for storing protein sequences
+    b) A database for storing DNA sequences
+    c) A file format for storing protein structure data
+    d) A database for storing phylogenetic trees
+    Answer: c) A file format for storing protein structure data
+
+12. How can you parse a PDB file and extract information using Biopython?
+    a) Using PDBUtils.parse()
+    b) Using PDBParser.read()
+    c) Using SeqIO.parse()
+    d) Using SeqUtils.extract()
+    Answer: b) Using PDBParser.read()
+
+13. What is the purpose of the Entrez module in Biopython?
+    a) To perform sequence alignment
+    b) To calculate molecular properties of sequences
+    c) To access and retrieve data from NCBI databases
+    d) To visualize phylogenetic trees
+    Answer: c) To access and retrieve data from NCBI databases
+
+14. What is a codon?
+    a) A sequence of three nucleotides in DNA or RNA
+    b) A protein structure motif
+    c) A tool for performing sequence alignment
+    d) A database for storing genetic information
+    Answer: a) A sequence of three nucleotides in DNA or RNA
+
+15. What are the advantages of using Biopython for bioinformatics tasks?
+    a) User-friendly syntax, extensive documentation, and availability of modules
+    b) High computational efficiency and advanced machine learning algorithms
+    c) Integration with other programming languages and tools
+    d) Proprietary software with comprehensive support
+    Answer: a) User-friendly syntax, extensive documentation, and availability of modules
