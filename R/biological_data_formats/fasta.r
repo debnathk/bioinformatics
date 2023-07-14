@@ -21,4 +21,4 @@ names
 
 # Writing a FASTA file
 output_file <- "output.fasta"
-write.fasta(sequences = sequence, names = names[1], nbchar = 80, file.out = output_file)
+write.fasta(sequences = sequences[1, ], names = names[1], nbchar = 80, file.out = output_file)
