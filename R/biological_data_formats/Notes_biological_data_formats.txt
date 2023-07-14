@@ -1,0 +1,42 @@
+What is FASTA format?
+- A commonly used file format for representing nucleotide or protein sequences, named after the FASTA software package, which introduced this format. 
+- Contains one or more sequence entries, each consisting of a header line and the corresponding sequence data. The header line starts with a ">" symbol and is followed by a sequence identifier or description. The sequence data is represented as a series of letters that represent the nucleotides (A, C, G, T/U) for DNA/RNA sequences or amino acids for protein sequences.
+- Example:
+    ```
+    >Sequence1
+    ATCGATCGATCGATCGATCGATCGATCG
+    >Sequence2
+    MALSQDPALRKELNALRAKDLAERKLA
+    ```
+- Used for storing and sharing sequence data, input for sequence alignment algorithms, database searches, and sequence analysis tools
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is FASTQ format?
+- A commonly used file format for storing both sequence and quality information from high-throughput sequencing technologies, such as Illumina sequencing.
+- Contains a combination of DNA, RNA, or protein sequences along with corresponding quality scores for each base.
+- Consists of multiple records, with each record typically spanning four lines in the following format:
+    Line 1: Begins with a "@" symbol and contains a sequence identifier or description.
+    Line 2: Contains the actual sequence of nucleotides or amino acids.
+    Line 3: Starts with a "+" symbol and is often optional. It can contain additional information about the sequence, but is commonly used as a placeholder.
+    Line 4: Contains quality scores for each base in the sequence.
+
+    Here's an example of a FASTQ file with a single record:
+    ```
+    @Sequence1
+    GATCGATCGATCGATCGATCGATCGATCGATCG
+    +Quality1
+    HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+    ```
+    In this example, "Sequence1" is the identifier for the sequence, and "GATCGATCGATCGATCGATCGATCGATCGATCG" is the actual sequence. The quality scores in the fourth line, "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH," correspond to each base in the sequence.
+
+- Crucial for read alignment, variant calling, and quality control analysis. They provide both sequence information and quality scores, enabling researchers to assess the reliability and accuracy of the sequencing data.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is SAM/BAM format?
+- SAM (Sequence Alignment/Map), BAM (Binary Alignment/Map) files are standard file formats for storing sequence alignment information, commonly generated from high-throughput sequencing data, such as DNA or RNA sequencing, to represent the alignment of reads to a reference genome.
+- SAM files are plain-text files that store the alignment information in a human-readable format. Each line represents a single alignment record and consists of multiple fields separated by tabs. These fields contain information about the read, alignment position, mapping quality, flags indicating alignment properties, and more.
+- BAM files, on the other hand, are binary versions of SAM files. They are compressed and indexed, which makes them more efficient for storage and processing. BAM files retain the same alignment information as SAM files but in a binary format, allowing for faster access and manipulation.
+- SAM/BAM files provide crucial information for downstream analyses, such as variant calling, gene expression quantification, and visualization, enabling researchers to study the alignment of sequencing reads to a reference genome, identify genomic variations, measure coverage, and perform various types of genomic analyses.
+- SAM/BAM files are typically generated using alignment software tools like Bowtie, BWA, or HISAT2, and can be visualized or analyzed using bioinformatics tools like SAMtools, IGV (Integrative Genomics Viewer), or Picard.

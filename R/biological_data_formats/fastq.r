@@ -7,7 +7,6 @@ fastq <- readFastq("SRR020192.fastq")
 # Accessing sequence and quality score information
 sequences <- sread(fastq)  # Get sequences
 ids <- id(fastq) # Get sequence ids
-qualities <- quality(fastq)  # Get quality scores
 
 # Writing a FASTQ file
 fastq_i = fastq[1]
