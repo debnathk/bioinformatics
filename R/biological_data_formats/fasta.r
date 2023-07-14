@@ -6,6 +6,7 @@
 # BiocManager::install("Biostrings")
 
 library("Biostrings")
+library("seqinr")
 
 sequences <- readDNAStringSet("ls_orchid.fasta")
 sequences
