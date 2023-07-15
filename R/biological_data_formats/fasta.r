@@ -100,16 +100,18 @@ dna_to_protein <- function(char_dna_sequence) {
     GGT = "G", GGC = "G", GGA = "G", GGG = "G"
   )
   
-  codons <- strsplit(char_dna_sequence, "(?<=\\G...)", perl = TRUE)[[1]]
-  protein_sequence <- sapply(codons, function(codon) {
+  codons <- strsplit(char_dna_sequence, "(?<=\\G...)", perl = TRUE)[[1]] 
+  # Perl-comaptible regular expression pattern is used to transform DNA sequences in a 
+  # pattern of 3 letters to represent them as codon.
+  protein_sequence <- sapply(codons, function(codon) { # sapply() function is an iterative one
     if (codon %in% names(codon_table)) {
-      codon_table[[codon]]
+      codon_table[[codon]] # putting quoted single letter AA codes one after another
     } else {
       "?"
     }
   })
   
-  return(paste(protein_sequence, collapse = ""))
+  return(paste(protein_sequence, collapse = "")) # removing the quotations, creates a string
 }
 
 translate_sequences <- function(file_path) {
