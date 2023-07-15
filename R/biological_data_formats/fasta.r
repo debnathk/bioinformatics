@@ -8,6 +8,7 @@
 library("Biostrings")
 library("seqinr")
 library("dplyr")
+library("stringdist")
 
 sequences <- readDNAStringSet("ls_orchid.fasta")
 sequences
@@ -49,11 +50,29 @@ fasta_file <- "ls_orchid.fasta"
 gc_contents <- gc_contents(fasta_file)
 
 # Question 2:
-#   Write an R function to calculate the pairwise sequence similarity (percent identity) between all sequences in a FASTA file.
+#   Write an R function to calculate the pairwise sequence similarity (percent identity)
+# between all sequences in a FASTA file.
 # Solution:
 
+pairwise_similarity <- function(file_path){
+fasta_file <- readDNAStringSet(file_path)
+num_sequences <- length(fasta_file)
+count_matrix <- matrix(0, nrow = num_sequences, ncol = num_sequences)
+  for (i in 1:num_sequences) {
+    for (j in 1:num_sequences) {
+      seq1 <- fasta_file[[i]]
+      seq1 <- paste(seq1, collapse = "")
+      seq2 <- fasta_file[[j]]
+      seq2 <- paste(seq2, collapse = "")
+      match_count <- pairwiseAlignment(pattern=seq2, subject=seq1)
+      match_count <- match_count@score[[1]]
+      count <- match_count/max(nchar(seq1), nchar(seq2))
+      count_matrix[i, j] <- count
+    }
+  }
+}
 # Usage example:
-fasta_file <- "path/to/your/fasta/file.fasta"
+fasta_file <- "ls_orchid.fasta"
 similarity_matrix <- pairwise_similarity(fasta_file)
 
 # Question 3:
