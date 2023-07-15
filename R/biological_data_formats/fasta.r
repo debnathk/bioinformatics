@@ -76,9 +76,56 @@ fasta_file <- "ls_orchid.fasta"
 similarity_matrix <- pairwise_similarity(fasta_file)
 
 # Question 3:
-#   Write an R function to translate DNA sequences to amino acid sequences (protein sequences) in a FASTA file.
+#   Write an R function to translate DNA sequences to amino acid sequences (protein sequences)
+# in a FASTA file.
 # Solution:
 
+dna_to_protein <- function(char_dna_sequence) {
+  codon_table <- list(
+    TTT = "F", TTC = "F", TTA = "L", TTG = "L",
+    TCT = "S", TCC = "S", TCA = "S", TCG = "S",
+    TAT = "Y", TAC = "Y", TAA = "*", TAG = "*",
+    TGT = "C", TGC = "C", TGA = "*", TGG = "W",
+    CTT = "L", CTC = "L", CTA = "L", CTG = "L",
+    CCT = "P", CCC = "P", CCA = "P", CCG = "P",
+    CAT = "H", CAC = "H", CAA = "Q", CAG = "Q",
+    CGT = "R", CGC = "R", CGA = "R", CGG = "R",
+    ATT = "I", ATC = "I", ATA = "I", ATG = "M",
+    ACT = "T", ACC = "T", ACA = "T", ACG = "T",
+    AAT = "N", AAC = "N", AAA = "K", AAG = "K",
+    AGT = "S", AGC = "S", AGA = "R", AGG = "R",
+    GTT = "V", GTC = "V", GTA = "V", GTG = "V",
+    GCT = "A", GCC = "A", GCA = "A", GCG = "A",
+    GAT = "D", GAC = "D", GAA = "E", GAG = "E",
+    GGT = "G", GGC = "G", GGA = "G", GGG = "G"
+  )
+  
+  codons <- strsplit(char_dna_sequence, "(?<=\\G...)", perl = TRUE)[[1]]
+  protein_sequence <- sapply(codons, function(codon) {
+    if (codon %in% names(codon_table)) {
+      codon_table[[codon]]
+    } else {
+      "?"
+    }
+  })
+  
+  return(paste(protein_sequence, collapse = ""))
+}
+
+translate_sequences <- function(file_path) {
+  sequences <- readDNAStringSet(file_path)
+  translated_sequences <- list()
+  
+  for (seq_id in names(sequences)) {
+    dna_sequence <- sequences[[seq_id]]
+    char_dna_sequence <- paste(dna_sequence, collapse = "")
+    protein_sequence <- dna_to_protein(char_dna_sequence)
+    translated_sequences[[seq_id]] <- protein_sequence
+  }
+  
+  return(translated_sequences)
+}
+
 # Usage example:
-fasta_file <- "path/to/your/fasta/file.fasta"
+fasta_file <- "ls_orchid.fasta"
 translated_sequences <- translate_sequences(fasta_file)
