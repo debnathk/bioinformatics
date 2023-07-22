@@ -1,2 +1,2 @@
 # bioinformatics
-This repository contains Python and R codes related to Bioinformatics operations
+This repository contains code snippets related to Bioinformatics operations
