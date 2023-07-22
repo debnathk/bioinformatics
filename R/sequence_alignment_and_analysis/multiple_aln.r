@@ -20,4 +20,13 @@ myMuscleAlignment <- msa(mySequences, "Muscle")
 myMuscleAlignment
 
 # Alignment visualization ####
-
+msaPrettyPrint(myMuscleAlignment,
+               output="tex",
+               y=c(164,213), 
+               subset=c(1:6),showNames="none",
+               showLogo="none", 
+               consensusColor="ColdHot",
+               showLegend=FALSE, 
+               shadingMode="similar",
+               askForOverwrite=FALSE, 
+               furtherCode=c("\\defconsensus{.}{lower}{upper}", "\\showruler{1}{top}"))
