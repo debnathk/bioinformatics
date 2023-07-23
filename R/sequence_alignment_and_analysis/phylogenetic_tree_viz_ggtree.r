@@ -29,4 +29,4 @@ ggtree(itol, layout = "circular") + geom_strip(13, 14, color = "red", barsize = 
 ## tidytree==0.4.2 is necessary in this step
 require(devtools)
 install_version("tidytree", version = "0.4.2", repos = "http://cran.us.r-project.org")
-ggtree(itol, layout = "unrooted") + geom_highlight_encircle(node = 11, fill = "steelblue")
+ggtree(itol, layout = "unrooted") + geom_hilight(node = 11, type = "encircle", fill = "steelblue")
