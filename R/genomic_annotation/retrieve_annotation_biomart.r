@@ -1,2 +1,2 @@
-# Retrieving gene and genome annotation form BiomaRt
+# Retrieving gene and genome annotation form BioMart
 
