@@ -19,7 +19,7 @@ get_annotated_regions_from_gff <- function(file_name){
   as(gff, "GRanges")
 }
 
-# Get counts in windows acroos the whole genome ####
+# Get counts in windows across the whole genome ####
 whole_genome <- csaw::windowCounts(
   file.path("windows.bam"),
   bin = TRUE,
