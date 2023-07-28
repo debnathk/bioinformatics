@@ -5,6 +5,7 @@ library(csaw)
 library(IRanges)
 library(SummarizedExperiment)
 library(rtracklayer)
+library(Rsamtools)
 
 # Download data ####
 download.file('https://raw.githubusercontent.com/PacktPublishing/R-Bioinformatics-Cookbook/master/datasets/ch1/windows.bam',
@@ -21,15 +22,15 @@ get_annotated_regions_from_gff <- function(file_name){
 # Get counts in windows acroos the whole genome ####
 whole_genome <- csaw::windowCounts(
   file.path("windows.bam"),
-  bin = TRUE, 
+  bin = TRUE,
   filter = 0,
-  width = 500, 
+  width = 500,
   param = csaw::readParam(
     minq = 20,
     dedup = TRUE,
     pe = "both"
   )
-  
+
 )
 colnames(whole_genome) <- c("small_data")
 annotated_regions <- get_annotated_regions_from_gff("genes.gff")
