@@ -51,6 +51,16 @@ hist(coin_flips_1000,
      cex.lab = 1.5,
      cex.main = 1.5)
 
+## Sampling random numbers from a list ####
+rand_num_10 <- sample(x = 1:10, size = 10) # No repetition of numbers
+rand_num_10
+rand_num_10_rpl <- sample(x = 1:10, size = 10, replace = TRUE) # Repeating numbers
+rand_num_10_rpl
+prob_vec <- c(rep(x = 0.05, times = 5), rep(x = 0.15, times = 5))
+prob_vec
+rand_num_10_bias <- sample(x = 1:10, size = 10, replace = TRUE, prob = prob_vec)
+rand_num_10_bias
+
 ## Sampling random characters from a list ####
 
 ## Simulating data with known correlations ####
