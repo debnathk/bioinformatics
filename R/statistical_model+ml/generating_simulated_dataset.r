@@ -12,3 +12,5 @@ hist(rand_unifs_1000,
      main = "",
      cex.lab = 1.5,
      cex.axis = 1.5)
+
+## Sampling from a normal distribution ####
