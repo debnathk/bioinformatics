@@ -69,6 +69,32 @@ rand_fruits <- sample(x = c("Mango", "Apple", "Banana"),
 rand_fruits
 
 ## Simulating data with known correlations ####
+rho <- 0.3 # Correlation coefficient
+x1 <- rnorm(n = 1000, mean = 0, sd = 1)
+x2 <- rho*x1 + sqrt(1 - rho*rho) * rnorm(n = 100, mean = 0, sd = 1)
+cor(x1, x2) # checking the correlation
 
-## Simulating a full dataset
+library(MASS)
+matrix_data <- c(12.68, 13.95, 3.07, 13.95, 30.39, 4.7, 3.07, 4.7, 2.18)
+cv_mat <- matrix(data = matrix_data, nrow = 3, ncol = 3, byrow = TRUE) # creating a covariant matrix for M1. M2, M3
+rownames(cv_mat) <- c("M1", "M2", "M3")
+colnames(cv_mat) <- rownames(cv_mat)
+cv_mat
+means <- c(159.54, 245.26, 25.52)
+sim_data <- mvrnorm(n = 40, mu = means, Sigma = cv_mat) # simulating correlated dataset
+sim_data
+
+### Ploting M1, M2 ####
+par(mar = c(5, 5, 1, 1))
+plot(x = sim_data[,1],
+     y = sim_data[,2],
+     pch = 20,
+     cex  = 1.25,
+     cex.lab = 1.25,
+     cex.axis = 1.25,
+     main = "",
+     xlab = expression(paste("Value of ", M[1])),
+     ylab = expression(paste("Value of ", M[2])))
+
+## Simulating a full dataset ####
 
