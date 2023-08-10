@@ -26,8 +26,16 @@ hist(rand_norms_1000,
      cex.axis = 1.5)
 
 ## Sampling from a Poisson distribution ####
+rand_poiss_10 <- rpois(n = 10, lambda = 1.5)
+rand_poiss_10
 
 ## Visualizing a poisson distribution ####
+rand_poiss_1000 <- rpois(n = 1000, lambda = 4.5)
+hist(rand_poiss_1000,
+     xlab = "Random value (X)",
+     main = "",
+     cex.lab = 1.5,
+     cex.axis = 1.5)
 
 ## Sampling from a bionomial distribution ####
 
