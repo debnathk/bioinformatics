@@ -62,6 +62,11 @@ rand_num_10_bias <- sample(x = 1:10, size = 10, replace = TRUE, prob = prob_vec)
 rand_num_10_bias
 
 ## Sampling random characters from a list ####
+rand_fruits <- sample(x = c("Mango", "Apple", "Banana"),
+                      size = 10,
+                      replace = TRUE,
+                      prob = c(0.15, 0.35, 0.5))
+rand_fruits
 
 ## Simulating data with known correlations ####
 
