@@ -14,3 +14,28 @@ hist(rand_unifs_1000,
      cex.axis = 1.5)
 
 ## Sampling from a normal distribution ####
+rand_norms_10 <- rnorm(n = 10, mean = 0, sd = 1)
+rand_norms_10
+
+## Visualizing a normal distribution ####
+rand_norms_1000 <- rnorm(n = 1000, mean = 0, sd = 1)
+hist(rand_norms_1000,
+     xlab = "Random value (X)",
+     main = "",
+     cex.lab  = 1.5,
+     cex.axis = 1.5)
+
+## Sampling from a Poisson distribution ####
+
+## Visualizing a poisson distribution ####
+
+## Sampling from a bionomial distribution ####
+
+## Visualizing a binomial distribution ####
+
+## Sampling random characters from a list ####
+
+## Simulating data with known correlations ####
+
+## Simulating a full dataset
+
