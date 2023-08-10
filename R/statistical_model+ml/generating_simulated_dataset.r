@@ -29,7 +29,7 @@ hist(rand_norms_1000,
 rand_poiss_10 <- rpois(n = 10, lambda = 1.5)
 rand_poiss_10
 
-## Visualizing a poisson distribution ####
+## Visualizing a Poisson distribution ####
 rand_poiss_1000 <- rpois(n = 1000, lambda = 4.5)
 hist(rand_poiss_1000,
      xlab = "Random value (X)",
@@ -38,8 +38,18 @@ hist(rand_poiss_1000,
      cex.axis = 1.5)
 
 ## Sampling from a bionomial distribution ####
+coin_flips <- rbinom(n = 1, size = 1000, prob = 0.5)
+coin_flips
+coin_flips_2 <- rbinom(n = 2, size = 1000, prob = 0.5)
+coin_flips_2
 
 ## Visualizing a binomial distribution ####
+coin_flips_1000 <- rbinom(n = 1000, size = 1000, prob = 0.5)
+hist(coin_flips_1000,
+     xlab = "Random value (X)",
+     main = "",
+     cex.lab = 1.5,
+     cex.main = 1.5)
 
 ## Sampling random characters from a list ####
 
